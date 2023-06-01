@@ -128,6 +128,9 @@ while running:
             block_color = RED
 
         pygame.draw.rect(window, block_color, (block['x'], block['y'], block_size, block_size))
+        
+        if block['y'] > window_height:
+        falling_blocks.remove(block)
 
         # Check for collision with the character
         if block['y'] + block_size >= character_y and block['y'] <= character_y + character_height:
