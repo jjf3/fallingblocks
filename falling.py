@@ -129,6 +129,7 @@ while running:
 
         pygame.draw.rect(window, block_color, (block['x'], block['y'], block_size, block_size))
         
+        # Check if the block has passed the bottom of the screen
         if block['y'] > window_height:
         falling_blocks.remove(block)
 
